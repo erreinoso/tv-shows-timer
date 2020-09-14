@@ -1,8 +1,9 @@
 .mainview {
-  display: grid;
-  grid-template-columns: 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr;
 
   @include desktop {
+    display: grid;
     grid-template-columns: 1fr 3fr;
   }
 
@@ -15,17 +16,25 @@
     background-color: rgba(105, 172, 172, 0.692);
     border-radius: rem(10);
     width: 90vw;
+    height: rem(280);
+
     @include tablet {
     }
     @include desktop {
-      height: 45h;
+      // height: 45vh;
       margin: rem(10);
     }
     h2 {
       margin-bottom: rem(20);
       text-shadow: 0.1em 0.1em rgba(7, 46, 153, 0.637);
     }
-
+    .ul-result {
+      display: flex;
+      justify-content: center;
+      @include desktop {
+        display: inline-block;
+      }
+    }
     .serieCard {
       display: grid;
       grid-template-columns: 2fr 3fr;
@@ -59,7 +68,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        // color: $color-medium-dark;
         font-size: $font-medium;
         @include desktop {
           h3 {
@@ -69,16 +77,22 @@
       }
     }
     .favelement {
-      box-shadow: 0.9rem 0.9rem 1.5rem -0.5625rem rgba(231, 87, 219, 0.9);
-      transform: scale(1.1);
+      box-shadow: 0.125rem 0.0625rem 1.5625rem -0.125rem #17202a;
+      box-sizing: content-box;
+      border: 3px solid $color-fifth;
+      @include desktop {
+        transform: scale(1.1);
+        // box-shadow: 0.9rem 0.9rem 1.5rem -0.5625rem rgba(231, 87, 219, 0.9);
+        // transform: scale(1.05);
+      }
     }
   }
 
   .favouriteSection {
-    grid-column: 1/2;
+    // grid-column: 1/2;
     color: $color-medium-light;
     width: 90vw;
-    padding: rem(20) rem(20) rem(0) rem(0);
+    padding: rem(20) rem(00) rem(0) rem(0);
     margin: rem(20);
     background-color: rgba(201, 178, 50, 0.726);
     border-radius: rem(10);
@@ -87,11 +101,11 @@
       height: 45vh;
       margin: rem(10);
       overflow: auto;
-      grid-column: 2/5;
+      grid-column: 2/3;
     }
     .favouriteSection_title {
       display: flex;
-      margin-left: rem(40);
+      margin-left: rem(20);
       flex-direction: row;
       justify-content: space-between;
       align-content: center;
@@ -104,6 +118,7 @@
       i {
         align-self: center;
         font-size: $font-large;
+        padding-right: rem(20);
         &:hover {
           color: $color-dark;
           font-weight: bold;
@@ -118,12 +133,15 @@
     }
 
     .ul-fav {
-      padding: rem(20);
+      display: grid;
+      justify-content: center;
+
+      @include tablet {
+        grid-template-columns: 1fr 1fr;
+        padding: rem(20);
+      }
       @include desktop {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        // width: 100%;
-        // height: 90%;
       }
       .serieFavCard {
         display: grid;
@@ -135,8 +153,8 @@
         height: rem(170);
         color: $color-medium-dark;
         border-radius: 5px;
+
         @include desktop {
-          // min-width: rem(250);margin-left: rem(1.25);
           box-shadow: 1.5rem 1.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.9);
           margin: rem(10);
           margin-top: 0;
@@ -160,7 +178,6 @@
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          // color: $color-medium-dark;
           font-size: $font-medium;
           i {
             color: $color-fifth;
@@ -179,10 +196,6 @@
           }
         }
       }
-    }
-    .favelement {
-      box-shadow: 0.9rem 0.9rem 1.5rem -0.5625rem rgba(231, 87, 219, 0.9);
-      transform: scale(1.1);
     }
   }
 }

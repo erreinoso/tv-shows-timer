@@ -1,8 +1,10 @@
 .page__footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: relative;
+  height: rem(40);
+  text-align: center;
+  top: 0;
+  bottom: rem(10);
   width: 100vw;
-  padding: 1rem;
-  color: $color-secondary;
+  padding: rem(10);
+  color: $color-light;
 }

@@ -22,7 +22,7 @@
   .favSection-p {
     // color: red;
     font-size: $font-extra-large;
-    transform: translate(22px);
+    // transform: translate(22px);
     @include desktop {
       font-size: $font-extra-large-desktop;
       // font-weight: bolder;
@@ -30,7 +30,7 @@
   }
   .favSection-notes {
     font-size: $font-large;
-    transform: translate(9px);
+    transform: translate(6px);
     @include desktop {
       font-size: $font-large-desktop;
       transform: translate(-12px);
