@@ -2,7 +2,12 @@
 
 This is the proposal for an app that will show you how much of your time has been spent watching your favourite TV shows. I thought this tool as an inprovement of the [Series Searcher App ](https://github.com/erreinoso/Series-searcher).
 
-<!-- ![screenshot of search page](https://github.com/erreinoso/Series-searcher/blob/master/Readme-image.PNG) -->
+This web has a responsive design:
+
+- Desktop size:
+  ![screenshot of search page - desktop layout](https://github.com/erreinoso/tv-shows-timer/blob/master/readme-screenshot.PNG)
+- Mobile size:
+  ![screenshot of search page - mobile layout](https://github.com/erreinoso/tv-shows-timer/blob/master/readme-screenshot-mobile.PNG)
 
 The user's watched TV shows had to be locally stored so they would remain in the list on future visits to the site. I used html, sass and javascript partials compiled with node/gulp.
 
