@@ -1,0 +1,188 @@
+.mainview {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include desktop {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .resultSection {
+    color: $color-medium-light;
+    background-color: rgba(255, 255, 255, 0.411);
+    padding: rem(20);
+    grid-column: 1/2;
+    margin: rem(20);
+    background-color: rgba(105, 172, 172, 0.692);
+    border-radius: rem(10);
+    width: 90vw;
+    @include tablet {
+    }
+    @include desktop {
+      height: 45h;
+      margin: rem(10);
+    }
+    h2 {
+      margin-bottom: rem(20);
+      text-shadow: 0.1em 0.1em rgba(7, 46, 153, 0.637);
+    }
+
+    .serieCard {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      background-color: #fbfcfc;
+      margin-bottom: rem(16);
+      box-shadow: 0.7rem 0.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.7);
+      width: rem(300);
+      height: rem(170);
+      color: $color-medium-dark;
+      border-radius: 5px;
+
+      @include desktop {
+        box-shadow: 1.5rem 1.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.9);
+      }
+      &_img {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        grid-column: 1/2;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+        overflow: hidden;
+
+        img {
+          height: 105%;
+        }
+      }
+      &_data {
+        grid-column: 2/5;
+        padding: 0.9375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // color: $color-medium-dark;
+        font-size: $font-medium;
+        @include desktop {
+          h3 {
+            font-size: $font-large;
+          }
+        }
+      }
+    }
+    .favelement {
+      box-shadow: 0.9rem 0.9rem 1.5rem -0.5625rem rgba(231, 87, 219, 0.9);
+      transform: scale(1.1);
+    }
+  }
+
+  .favouriteSection {
+    grid-column: 1/2;
+    color: $color-medium-light;
+    width: 90vw;
+    padding: rem(20) rem(20) rem(0) rem(0);
+    margin: rem(20);
+    background-color: rgba(201, 178, 50, 0.726);
+    border-radius: rem(10);
+
+    @include desktop {
+      height: 45vh;
+      margin: rem(10);
+      overflow: auto;
+      grid-column: 2/5;
+    }
+    .favouriteSection_title {
+      display: flex;
+      margin-left: rem(40);
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+      margin-bottom: rem(20);
+
+      h2 {
+        align-content: center;
+        text-shadow: 0.1em 0.1em rgba(7, 46, 153, 0.637);
+      }
+      i {
+        align-self: center;
+        font-size: $font-large;
+        &:hover {
+          color: $color-dark;
+          font-weight: bold;
+        }
+        @include desktop {
+          &:hover {
+            color: $color-fifth;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .ul-fav {
+      padding: rem(20);
+      @include desktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        // width: 100%;
+        // height: 90%;
+      }
+      .serieFavCard {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        background-color: #fbfcfc;
+        margin-bottom: rem(16);
+        box-shadow: 0.7rem 0.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.7);
+        width: rem(300);
+        height: rem(170);
+        color: $color-medium-dark;
+        border-radius: 5px;
+        @include desktop {
+          // min-width: rem(250);margin-left: rem(1.25);
+          box-shadow: 1.5rem 1.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.9);
+          margin: rem(10);
+          margin-top: 0;
+        }
+        &_img {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          grid-column: 1/2;
+          display: flex;
+          justify-content: center;
+          background-size: cover;
+          overflow: hidden;
+
+          img {
+            height: 105%;
+          }
+        }
+        &_data {
+          grid-column: 2/5;
+          padding: 0.9375rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          // color: $color-medium-dark;
+          font-size: $font-medium;
+          i {
+            color: $color-fifth;
+            &:hover {
+              color: $color-secondary;
+              font-weight: bold;
+            }
+          }
+          h3 {
+            text-shadow: 0.1em 0.1em rgba(124, 154, 236, 0.637);
+          }
+          @include desktop {
+            h3 {
+              font-size: $font-large;
+            }
+          }
+        }
+      }
+    }
+    .favelement {
+      box-shadow: 0.9rem 0.9rem 1.5rem -0.5625rem rgba(231, 87, 219, 0.9);
+      transform: scale(1.1);
+    }
+  }
+}

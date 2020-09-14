@@ -1,0 +1,77 @@
+.header {
+  padding: 10px 40px 0px 40px;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: $color-light;
+
+  .logo {
+    height: rem(80);
+    width: 90vw;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .title {
+    display: none;
+  }
+
+  .favSection-p {
+    // color: red;
+    font-size: $font-extra-large;
+    transform: translate(22px);
+    @include desktop {
+      font-size: $font-extra-large-desktop;
+      // font-weight: bolder;
+    }
+  }
+  .favSection-notes {
+    font-size: $font-large;
+    transform: translate(9px);
+    @include desktop {
+      font-size: $font-large-desktop;
+      transform: translate(-12px);
+    }
+  }
+  .search {
+    padding: 1rem;
+    opacity: 0.5;
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    // align-content: center;
+    .input {
+      height: rem(30);
+      width: 70vw;
+      text-align: center;
+      opacity: 1;
+      font-size: $font-medium;
+      border-radius: 10px;
+      font-weight: bolder;
+      color: black;
+      padding: rem(16);
+      @include desktop {
+        max-width: 900px;
+      }
+    }
+    .button {
+      // align-items: center;
+      // align-content: center;
+      font-size: $font-medium;
+      opacity: 1;
+      padding: rem(16);
+      // position: absolute;
+      @include desktop {
+        font-size: $font-large;
+      }
+    }
+  }
+
+  @include tablet {
+  }
+}
