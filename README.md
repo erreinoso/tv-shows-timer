@@ -8,7 +8,7 @@ This web has a responsive design:
 
   ![screenshot of search page - desktop layout](https://github.com/erreinoso/tv-shows-timer/blob/master/readme-screenshot.PNG)
 
-- Mobile size:
+- Mobile size:<br>
 
   ![screenshot of search page - mobile layout](https://github.com/erreinoso/tv-shows-timer/blob/master/readme-screenshot-mobile.PNG)
 
