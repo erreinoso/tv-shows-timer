@@ -7,4 +7,7 @@
   width: 100vw;
   padding: rem(10);
   color: $color-light;
+  @include desktop {
+    display: block;
+  }
 }

@@ -64,7 +64,7 @@ function renderFavouriteSection() {
       seriesFav += `<div class="serieFavCard_data"><h3 >${favouriteSeries[i].name}</h3>`;
       seriesFav += `<h4 class="hidden"> Duración del episodio: ${favouriteSeries[i].runtime} minutos</h4>`;
       seriesFav += `<h4 class="hidden" > Número de episodios: ${favouriteSeries[i].episodes.length}</h4>`;
-      seriesFav += `<h4> Spent time: ${hoursSpent} hours or almost ${daysSpent} days  </h4>`;
+      seriesFav += `<h4> Spent time: <br>${hoursSpent} hours or almost ${daysSpent} days  </h4>`;
       // seriesFav += `<button type="button" class="js-delete resetButton"> ❌ </button></div></li>`;
       seriesFav += `<i  class=" icon icon-trash far fa-trash-alt js-delete resetButton" ></i><div>`;
       favSection.innerHTML = seriesFav;

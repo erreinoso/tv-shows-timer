@@ -1,10 +1,8 @@
 .mainview {
-  // display: grid;
-  // grid-template-columns: 1fr;
-
   @include desktop {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    // justify-content: space-between;
   }
 
   .resultSection {
@@ -15,14 +13,17 @@
     margin: rem(20);
     background-color: rgba(105, 172, 172, 0.692);
     border-radius: rem(10);
-    width: 90vw;
+    // width: 90vw;
     height: rem(280);
 
     @include tablet {
     }
     @include desktop {
-      // height: 45vh;
+      // display: inline-block;
+      height: 45vh;
       margin: rem(10);
+      // width: 20%;
+      grid-column: 1/2;
     }
     h2 {
       margin-bottom: rem(20);
@@ -46,9 +47,6 @@
       color: $color-medium-dark;
       border-radius: 5px;
 
-      @include desktop {
-        box-shadow: 1.5rem 1.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.9);
-      }
       &_img {
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -81,7 +79,8 @@
       box-sizing: content-box;
       border: 3px solid $color-fifth;
       @include desktop {
-        transform: scale(1.1);
+        box-sizing: border-box;
+        transform: scale(1.05);
         // box-shadow: 0.9rem 0.9rem 1.5rem -0.5625rem rgba(231, 87, 219, 0.9);
         // transform: scale(1.05);
       }
@@ -91,7 +90,7 @@
   .favouriteSection {
     // grid-column: 1/2;
     color: $color-medium-light;
-    width: 90vw;
+    // width: 90vw;
     padding: rem(20) rem(00) rem(0) rem(0);
     margin: rem(20);
     background-color: rgba(201, 178, 50, 0.726);
@@ -100,7 +99,7 @@
     @include desktop {
       height: 45vh;
       margin: rem(10);
-      overflow: auto;
+      overflow: scroll;
       grid-column: 2/3;
     }
     .favouriteSection_title {
@@ -138,7 +137,7 @@
 
       @include tablet {
         grid-template-columns: 1fr 1fr;
-        padding: rem(20);
+        padding: rem(0) rem(20) rem(0) rem(20);
       }
       @include desktop {
         grid-template-columns: 1fr 1fr 1fr;
@@ -156,7 +155,7 @@
 
         @include desktop {
           box-shadow: 1.5rem 1.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.9);
-          margin: rem(10);
+          // margin: rem(10);
           margin-top: 0;
         }
         &_img {
@@ -181,6 +180,11 @@
           font-size: $font-medium;
           i {
             color: $color-fifth;
+            // display: inline-flex;
+            // justify-content: flex-end;
+            position: absolute;
+
+            transform: translate(rem(135), rem(65));
             &:hover {
               color: $color-secondary;
               font-weight: bold;

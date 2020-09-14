@@ -14,7 +14,7 @@ Just be warned, the amount of time dedicated to be in the sofa may cause severe 
 
 - After getting all the series stored, we can search for the one we want and add it to a list of already watched series.
 
-- Automatically, the app shows the duration of the set of TVV shows watched.
+- Automatically, the app shows the duration of the set of TV shows watched.
 
 - It will save each of these watched TV shows in Local Storage so we can keep watching them without refreshing the page.
 
