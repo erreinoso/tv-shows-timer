@@ -10,7 +10,7 @@
   .logo {
     height: rem(80);
     width: 90vw;
-    @include desktop {
+    @include tablet {
       max-width: rem(500);
     }
     img {
