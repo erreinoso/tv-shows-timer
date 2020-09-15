@@ -43,6 +43,7 @@ function renderFavouriteSection() {
   favSection.innerHTML = '';
   let i;
   let favCard;
+  let day;
 
   if (favouriteSeries.length === 0) {
     btnReset.classList.add('hidden');
@@ -54,17 +55,23 @@ function renderFavouriteSection() {
       let hoursSpent =
         (favouriteSeries[i].runtime * favouriteSeries[i].episodes.length) / 60;
       let daysSpent = Math.ceil(hoursSpent / 24);
+
       if (favouriteSeries[i].image_path === null) {
         favCard = imgTemporary;
       } else {
         favCard = favouriteSeries[i].image_path;
+      }
+      if (daysSpent <= 1) {
+        day = 'day';
+      } else {
+        day = 'days';
       }
       seriesFav += `<li class="js-serieFavCard serieFavCard" id="${favouriteSeries[i].id}">`;
       seriesFav += `<div class="serieFavCard_img"><img src="${favCard}" alt="Foto de ${favouriteSeries[i].name}"></div>`;
       seriesFav += `<div class="serieFavCard_data"><h3 >${favouriteSeries[i].name}</h3>`;
       seriesFav += `<h4 class="hidden"> Duración del episodio: ${favouriteSeries[i].runtime} minutos</h4>`;
       seriesFav += `<h4 class="hidden" > Número de episodios: ${favouriteSeries[i].episodes.length}</h4>`;
-      seriesFav += `<h4> Spent time: <br>${hoursSpent} hours or almost ${daysSpent} days  </h4>`;
+      seriesFav += `<h4> Spent time: <br>${hoursSpent} hours or almost ${daysSpent} ${day}  </h4>`;
       // seriesFav += `<button type="button" class="js-delete resetButton"> ❌ </button></div></li>`;
       seriesFav += `<i  class=" icon icon-trash far fa-trash-alt js-delete resetButton" ></i><div>`;
       favSection.innerHTML = seriesFav;
@@ -104,8 +111,10 @@ function renderFavouriteTime() {
       hoursCalculate += hoursSpent;
       daysCalculate += daysSpent;
 
-      daysToShow = parseInt(daysCalculate);
-      hoursToShow = parseInt(hoursCalculate - 24 * daysToShow);
+      daysToShow = parseInt(daysCalculate).toString().padStart(2, '0');
+      hoursToShow = parseInt(hoursCalculate - 24 * daysToShow)
+        .toString()
+        .padStart(2, '0');
 
       if (daysToShow <= 1) {
         day = 'day';

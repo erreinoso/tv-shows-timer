@@ -13,14 +13,13 @@
     margin: rem(20);
     background-color: rgba(105, 172, 172, 0.692);
     border-radius: rem(10);
-    // width: 90vw;
-    height: rem(280);
+    // width: 590vw;
 
     @include tablet {
     }
     @include desktop {
       // display: inline-block;
-      height: 45vh;
+      height: rem(240);
       margin: rem(10);
       // width: 20%;
       grid-column: 1/2;
@@ -42,8 +41,8 @@
       background-color: #fbfcfc;
       margin-bottom: rem(16);
       box-shadow: 0.7rem 0.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.7);
-      width: rem(300);
-      height: rem(170);
+      width: rem(270);
+      height: rem(150);
       color: $color-medium-dark;
       border-radius: 5px;
 
@@ -57,7 +56,7 @@
         overflow: hidden;
 
         img {
-          height: 105%;
+          width: 100%;
         }
       }
       &_data {
@@ -97,9 +96,9 @@
     border-radius: rem(10);
 
     @include desktop {
-      height: 45vh;
+      height: rem(240);
       margin: rem(10);
-      overflow: scroll;
+      overflow-y: scroll;
       grid-column: 2/3;
     }
     .favouriteSection_title {
@@ -148,8 +147,8 @@
         background-color: #fbfcfc;
         margin-bottom: rem(16);
         box-shadow: 0.7rem 0.5rem 1.5rem -0.5625rem rgba(0, 0, 0, 0.7);
-        width: rem(300);
-        height: rem(170);
+        width: rem(270);
+        height: rem(150);
         color: $color-medium-dark;
         border-radius: 5px;
 
@@ -166,14 +165,17 @@
           justify-content: center;
           background-size: cover;
           overflow: hidden;
+          height: 100%;
 
           img {
-            height: 105%;
+            height: 100%;
+
+            overflow: hidden;
           }
         }
         &_data {
           grid-column: 2/5;
-          padding: 0.9375rem;
+          padding: rem(0) rem(25) rem(0) rem(15);
           display: flex;
           flex-direction: column;
           justify-content: space-around;
@@ -182,9 +184,8 @@
             color: $color-fifth;
             // display: inline-flex;
             // justify-content: flex-end;
-            position: absolute;
-
-            transform: translate(rem(135), rem(65));
+            position: relative;
+            transform: translate(rem(122), rem(-70));
             &:hover {
               color: $color-secondary;
               font-weight: bold;
