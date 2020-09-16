@@ -1,4 +1,3 @@
-'use strict';
 //Function handle with all different utilities
 
 function favouritesHandler(ev) {

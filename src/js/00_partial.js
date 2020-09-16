@@ -14,10 +14,11 @@ const resultsWrapper = document.querySelector('.js-ul-result');
 
 let seriesResult = [];
 let favouriteSeries = [];
+let searchinput;
 
 //Bring data from API
 function getSeriesId() {
-  let searchinput = input.value.replaceAll(' ', '-');
+  searchinput = input.value.replaceAll(' ', '-');
   fetch(`http://www.episodate.com/api/show-details?q=${searchinput}`)
     .then((response) => response.json())
     .then((data) => {

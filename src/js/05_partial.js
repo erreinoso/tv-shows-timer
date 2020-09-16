@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable strict */
 
 // Listener functions
 // Searched elements' listeners
@@ -8,13 +8,6 @@ function addListeners() {
     li.addEventListener('click', favouritesHandler);
   }
 }
-
-// function addListenersGenre() {
-//   let liElem = document.querySelectorAll('.js-serieCard');
-//   for (const li of liElem) {
-//     li.addEventListener('click', consoleName);
-//   }
-// }
 
 //Search button's listener
 btn.addEventListener('click', getSeriesId);
