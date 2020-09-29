@@ -19,7 +19,7 @@ let searchinput;
 //Bring data from API
 function getSeriesId() {
   searchinput = input.value.replaceAll(' ', '-');
-  fetch(`http://www.episodate.com/api/show-details?q=${searchinput}`)
+  fetch(`https://www.episodate.com/api/show-details?q=${searchinput}`)
     .then((response) => response.json())
     .then((data) => {
       seriesResult = data.tvShow;
